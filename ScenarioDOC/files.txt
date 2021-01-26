@@ -1,0 +1,87 @@
+Scenario: You are given the task to test out a new area of the website that gives the user a snapshot of important information once they login.  You are given both an image of the design and acceptance criteria / requirements.  Please review them below:
+
+
+
+Acceptance Criteria / Requirements:
+- Users should see a welcome module in which they are presented with the following information:
+●	A welcome message which includes their first name
+●	Information about the last time they logged in
+●	Number of bank/credit card transactions they have which need to be manually categorized by the user (categories are normally assigned automatically via an algorithm.  Example category might be rent, gas, restaurants, etc.  In the case where it can’t automatically be categorized, it will be unfoldered).
+○	Clicking on this link takes you to a transactions screen
+●	The name of your planner
+●	How much money you are allowed to spend every week
+
+Task 1 : Write a list of questions or uncertainties you may have that you would ask a designer or stakeholder concerning the image or acceptance criteria/requirements.
+
+●	Should show the profile user image (right corner on the screen)
+●	In Last Login should we display time stamp of last login ?
+●	A Welcome message should we display only first name ? why not full name ?
+●	How can I modify the weekly spending target
+●	What is the expected behavior if I click on need help (Get in touch) ?
+●	How many unfoldered transaction I can add ?
+●	Can we display the my planner count ?
+●	If first time user login what would be the last login time stamp ?
+●	If incorrect user login what should be the error message ?
+
+
+Task 2 : Write a list of data or users in a certain state that you may need to properly test this.
+
+●	User with 1 unfoldered transaction data
+●	User with more than 10 unfoldered transaction data
+●	User with lengthy name
+●	User with Spending target as maximum and minimum
+●	First time user login and check how the details show up
+●	User with planner count as maximum and minimum
+●	Invalid user login
+
+
+Task 3 : Write a list of high-level test scenarios that you can think of based only on the design and acceptance criteria you are given.  After you list them out, number them in terms of priority (1 - must test, 2 - should test, 3 - test only if there is time).
+
+Example:
+3 - Verify that users who have not logged in for more than a year display the correct
+1 - Verify that clicking on the transactions link takes you to the transactions section
+
+●	1.Verify the login is successful for the correct user
+●	1.Verify the correct user name is displayed
+●	1.Verify the Last Login coming correctly 
+●	1.Verify the transactions details and counts are correct
+●	1.Verify that clicking on the transactions link takes you to the transactions section
+●	1.Verify my weekly spending target is coming correctly 
+●	2.Verify the Need help option is working fine
+●	2.Veify the log out is working correctly 
+●	2.Verify the information (i) button behave as expected 
+●	3.Verify the UI components aligned properly
+●	3.Verify the fonts are coming as expected
+●	3.Verify the app is access able in different operating system, different browser and mobiles
+
+
+Task 4: Imagine that you find a defect while testing the above.  Write a sample defect report below:
+
+Title: Unfoldered Transactions information button (i) link is not navigating 
+	
+Step to Reproduce: 
+1.	Login to the application
+2.	Confirm the Unfoldered Transactions is displayed
+3.	Click on the Unfoldered Transactions link
+4.	Make sure the screen navigating to transactions screen
+
+Actual: When click on Unfoldered Transactions, its not navigating to transactions screen
+Expected: When user click on Unfoldered Transactions, it should navigate to transactions screen
+
+
+
+Task 5: What scenarios would you consider valid for automation?  Why?
+
+Automation Scenario:
+
+1.Verify the login is successful
+2.Verify the user name is displayed
+3.Verify the need help text is displayed and the Get in touch link is access able
+4.Verify the Last Login displayed and correct time details are coming
+5.Verify the Unfoldered transactions are displayed
+6.Verify the Unfoldered transactions link is navigation properly
+7.Verify the Your Planner is displayed and I have list of planner or not
+8.Verify the Weekly Spending Target is displayed and the amount in dollars are displayed correctly 
+9.Verify the log out is successful
+10.Verify the in valid user login and getting the correct warning message
+11.Write test for accessing the application in different devices and browser 
